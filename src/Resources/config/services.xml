@@ -14,7 +14,7 @@
         <parameter key="webit_soap_api.result_type_map.factory.class">Webit\SoapApi\ResultTypeMap\ResultTypeMapFactory</parameter>
 
         <parameter key="webit_soap_api.helper.binary_string.class">Webit\SoapApi\Util\BinaryStringHelper</parameter>
-        <parameter key="webit_soap_api.hydrator.serializer.class">Webit\SoapApi\Hydrator\HydratorSerializer</parameter>
+        <parameter key="webit_soap_api.hydrator.serializer.class">Webit\SoapApi\Hydrator\HydratorSerializerBased</parameter>
         <parameter key="webit_soap_api.hydrator.transparent.class">Webit\SoapApi\Hydrator\HydratorTransparent</parameter>
     </parameters>
     <services>
