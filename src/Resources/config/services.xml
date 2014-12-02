@@ -8,8 +8,8 @@
         <parameter key="webit_soap_api.soap_client_factory.default.class">Webit\SoapApi\SoapClient\SoapClientFactory</parameter>
         <parameter key="webit_soap_api.executor_factory.class">Webit\SoapApi\SoapApiExecutorFactory</parameter>
 
-        <parameter key="webit_soap_api.input_normalizer.serializer_factory.class">Webit\SoapApi\Input\InputNormalizerSerializedBasedFactory</parameter>
-        <parameter key="webit_soap_api.input_normalizer.serializer.class">Webit\SoapApi\Input\InputNormalizerSerializedBased</parameter>
+        <parameter key="webit_soap_api.input_normalizer.serializer_factory.class">Webit\SoapApi\Input\InputNormalizerSerializerBasedFactory</parameter>
+        <parameter key="webit_soap_api.input_normalizer.serializer.class">Webit\SoapApi\Input\InputNormalizerSerializerBased</parameter>
 
         <parameter key="webit_soap_api.result_type_map.factory.class">Webit\SoapApi\ResultTypeMap\ResultTypeMapFactory</parameter>
 
