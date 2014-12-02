@@ -6,11 +6,13 @@
  
 namespace Webit\Bundle\SoapApiBundle;
 
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
 /**
  * Class WebitSoapApiBundle
  * @author Daniel Bojdo <daniel.bojdo@web-it.eu>
  */
-class WebitSoapApiBundle 
+class WebitSoapApiBundle extends Bundle
 {
 
 }
