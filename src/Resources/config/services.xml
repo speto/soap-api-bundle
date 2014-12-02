@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd"
+        >
+    <parameters>
+        <parameter key="webit_soap_api.soap_client_factory.default.class">Webit\SoapApi\SoapClient\SoapClientFactory</parameter>
+        <parameter key="webit_soap_api.executor_factory.class">Webit\SoapApi\SoapApiExecutorFactory</parameter>
+
+        <parameter key="webit_soap_api.input_normalizer.serializer_factory.class">Webit\SoapApi\Input\InputNormalizerSerializedBasedFactory</parameter>
+        <parameter key="webit_soap_api.input_normalizer.serializer.class">Webit\SoapApi\Input\InputNormalizerSerializedBased</parameter>
+
+        <parameter key="webit_soap_api.result_type_map.factory.class">Webit\SoapApi\ResultTypeMap\ResultTypeMapFactory</parameter>
+
+        <parameter key="webit_soap_api.helper.binary_string.class">Webit\SoapApi\Util\BinaryStringHelper</parameter>
+        <parameter key="webit_soap_api.hydrator.serializer.class">Webit\SoapApi\Hydrator\HydratorSerializer</parameter>
+        <parameter key="webit_soap_api.hydrator.transparent.class">Webit\SoapApi\Hydrator\HydratorTransparent</parameter>
+    </parameters>
+    <services>
+        <service id="webit_soap_api.soap_client_factory.default" class="%webit_soap_api.soap_client_factory.default.class%" />
+        <service id="webit_soap_api.soap_client_factory" alias="webit_soap_api.soap_client_factory.default"/>
+        <service id="webit_soap_api.executor_factory" class="%webit_soap_api.executor_factory.class%"/>
+
+        <service id="webit_soap_api.input_normalizer.serializer_factory" class="%webit_soap_api.input_normalizer.serializer_factory.class%">
+            <argument type="service" id="jms_serializer" />
+        </service>
+
+        <service id="webit_soap_api.result_type_map.factory" class="%webit_soap_api.result_type_map.factory.class%" />
+
+        <service id="webit_soap_api.helper.binary_string" class="%webit_soap_api.helper.binary_string.class%" public="false" />
+        <service id="webit_soap_api.hydrator.serializer" class="%webit_soap_api.hydrator.serializer.class%">
+            <argument type="service" id="jms_serializer" />
+            <argument type="service" id="webit_soap_api.helper.binary_string" />
+        </service>
+
+        <service id="webit_soap_api.hydrator.transparent" class="%webit_soap_api.hydrator.transparent.class%" />
+        <service id="webit_soap_api.hydrator" alias="webit_soap_api.hydrator.serializer" />
+    </services>
+</container>

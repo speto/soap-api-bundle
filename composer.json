@@ -1,0 +1,36 @@
+{
+    "name" : "webit/soap-api-bundle",
+    "type": "symfony-bundle",
+    "description": "SOAP API library Symfony 2 integration",
+    "keywords": ["web-it","soap", "api"],
+    "homepage": "http://www.web-it.eu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Bojdo",
+            "email": "daniel.bojdo@web-it.eu",
+            "homepage": "http://www.web-it.eu"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": "~2.3",
+        "jms/serializer-bundle": "~0.13",
+        "webit/soap-api": "dev-master"
+    },
+    "require-dev": {
+        "behat/behat": "~3.0",
+        "phpunit/phpunit": "~4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webit\\Bundle\\SoapApiBundle\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webit\\Bundle\\SoapApiBundle\\Features\\" : "features/bootstrap"
+        }
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,5 @@
+default:
+    suites:
+        WebitSoapApiBundle:
+            contexts:
+                - Webit\Bundle\SoapApiBundle\Features\ExtensionContext
