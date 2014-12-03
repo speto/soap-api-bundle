@@ -20,16 +20,12 @@
     },
     "require-dev": {
         "behat/behat": "~3.0",
+        "behat/symfony2-extension": "~2.0",
         "phpunit/phpunit": "~4.2"
     },
     "autoload": {
         "psr-4": {
             "Webit\\Bundle\\SoapApiBundle\\" : "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Webit\\Bundle\\SoapApiBundle\\Features\\" : "features/bootstrap"
         }
     },
     "minimum-stability": "dev"

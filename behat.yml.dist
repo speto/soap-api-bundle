@@ -1,5 +1,13 @@
 default:
+    calls:
+        error_reporting: 16383
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                path: src/Features/App/AppKernel.php
+                env: test
+                debug: true
     suites:
         WebitSoapApiBundle:
-            contexts:
-                - Webit\Bundle\SoapApiBundle\Features\ExtensionContext
+            type: symfony_bundle
+            bundle: WebitSoapApiBundle

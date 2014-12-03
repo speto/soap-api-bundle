@@ -11,11 +11,10 @@
         <parameter key="webit_soap_api.input_normalizer.serializer_factory.class">Webit\SoapApi\Input\InputNormalizerSerializerBasedFactory</parameter>
         <parameter key="webit_soap_api.input_normalizer.serializer.class">Webit\SoapApi\Input\InputNormalizerSerializerBased</parameter>
 
-        <parameter key="webit_soap_api.result_type_map.factory.class">Webit\SoapApi\ResultTypeMap\ResultTypeMapFactory</parameter>
+        <parameter key="webit_soap_api.result_type_map.factory.class">Webit\SoapApi\ResultType\ResultTypeMapFactory</parameter>
 
         <parameter key="webit_soap_api.helper.binary_string.class">Webit\SoapApi\Util\BinaryStringHelper</parameter>
         <parameter key="webit_soap_api.hydrator.serializer.class">Webit\SoapApi\Hydrator\HydratorSerializerBased</parameter>
-        <parameter key="webit_soap_api.hydrator.transparent.class">Webit\SoapApi\Hydrator\HydratorTransparent</parameter>
     </parameters>
     <services>
         <service id="webit_soap_api.soap_client_factory.default" class="%webit_soap_api.soap_client_factory.default.class%" />
@@ -34,7 +33,6 @@
             <argument type="service" id="webit_soap_api.helper.binary_string" />
         </service>
 
-        <service id="webit_soap_api.hydrator.transparent" class="%webit_soap_api.hydrator.transparent.class%" />
         <service id="webit_soap_api.hydrator" alias="webit_soap_api.hydrator.serializer" />
     </services>
 </container>
