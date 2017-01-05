@@ -14,9 +14,9 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/symfony": "~2.3",
-        "jms/serializer-bundle": "~0.12",
-        "webit/soap-api": "~1.0"
+        "symfony/symfony": "~2.3|~3.0",
+        "jms/serializer-bundle": "~0.12|~1.1",
+        "webit/soap-api": "^1.0.1"
     },
     "require-dev": {
         "behat/behat": "~3.0",
